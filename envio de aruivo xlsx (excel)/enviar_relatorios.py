@@ -26,7 +26,7 @@ msg['Subject'] = assunto
 msg.attach(MIMEText(corpo_email, 'plain'))
 
 # Anexar arquivo
-filename = os.path.join("C:\\Users\\bruno\\Downloads", "relatorio.xlsx")
+filename = os.path.join("Caminho do arquivo", "relatorio.xlsx")
 attachment = open(filename, "rb")
 part = MIMEBase('application', 'octet-stream')
 part.set_payload((attachment).read())
