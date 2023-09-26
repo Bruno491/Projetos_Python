@@ -5,6 +5,11 @@ from email.mime.base import MIMEBase
 from email import encoders
 import os
 from datetime import datetime
+import locale
+import pyautogui
+
+# Configuração do idioma para português
+locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
 # Informações do e-mail
 remetente = 'email_login'
@@ -21,7 +26,7 @@ msg['Subject'] = assunto
 msg.attach(MIMEText(corpo_email, 'plain'))
 
 # Anexar arquivo
-filename = os.path.join("caminho_arquivo", "relatorio.xlsx")
+filename = os.path.join("C:\\Users\\bruno\\Downloads", "relatorio.xlsx")
 attachment = open(filename, "rb")
 part = MIMEBase('application', 'octet-stream')
 part.set_payload((attachment).read())
@@ -36,3 +41,5 @@ server.login(remetente, senha)
 text = msg.as_string()
 server.sendmail(remetente, destinatarios, text)
 server.quit()
+
+pyautogui.alert("Relatório enviado")
