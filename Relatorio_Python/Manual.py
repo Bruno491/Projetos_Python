@@ -35,3 +35,5 @@ def manual():
             print('Não, esse programa foi feito para ser utilizado APENAS neste equipamento\n')
             print('Caso seja detectado a tentativa de utilização do mesmo em outro equipamento\n')
             print('A equipe de desenvolvimento será alertada')
+            os.system('pause')
+            os.system('cls')

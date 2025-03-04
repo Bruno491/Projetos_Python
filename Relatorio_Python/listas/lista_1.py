@@ -10,7 +10,6 @@ def lista_1():
         if op_cont == 1:
             return 'Usuario1@outlook.com'
         elif op_cont == 2:
-            #return 'lab.estagio2@toledoprudente.edu.br'
             return 'Usuario2@outlook.com'
         elif op_cont == 0:
             print('Voltando...')

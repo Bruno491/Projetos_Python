@@ -7,9 +7,9 @@ email = input("Email: ")
 password = input("Senha: ")
 
 # Verificar se existe arquivo com as credenciais
-if os.path.exists("C:\\restante_do_caminho\\usuario.txt"):
+if os.path.exists("C:\\Users\\bruno\\OneDrive\\Documentos\\usuario.txt"):
     # Verificar se as credenciais do usuário estão corretas
-    with open("C:\\Users\\restante_do_caminho\\usuario.txt", "r") as f:
+    with open("C:\\Users\\bruno\\OneDrive\\Documentos\\usuario.txt", "r") as f:
         users = f.read().splitlines()
 
     for user in users:
@@ -24,6 +24,6 @@ else:
     print("Usuario não encontrado! Por favor conta uma conta.")
     # Criar novo ususario
     if input("Deseja criar uma conta? (S/N): ") == "S":
-        with open("C:\\restante_do_caminho\\usuario.txt", "a") as f:
+        with open("C:\\Users\\bruno\\OneDrive\\Documentos\\usuario.txt", "a") as f:
             f.write(email + ":" + password + "\n")
         print("Conta registrada com sucesso!")
